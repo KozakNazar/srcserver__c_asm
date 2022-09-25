@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_NON_CONFORMING_SWPRINTFS
-#define WIN32_LEAN_AND_MEAN // компоненти з заголовків Windows, 
-                            // що рідко застосовуються
+#define WIN32_LEAN_AND_MEAN // ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГЁ Г§ Г§Г ГЈГ®Г«Г®ГўГЄВіГў Windows, 
+                            // Г№Г® Г°ВіГ¤ГЄГ® Г§Г Г±ГІГ®Г±Г®ГўГіГѕГІГјГ±Гї
 /******************************************************************
 * N.Kozak // Lviv'2019 // example server C(LLNW)-Asm for pkt2 SP  *
 *                         file: server.cpp                        *
@@ -56,7 +56,7 @@ double d2 = 30.;  // defaault value
 float e1 = 40.;   // defaault value
 double f2 = 50.;  // defaault value
 
-char *http_response_fmt =
+char *http_response_fmt = (char*)
 "HTTP / 1.1 200 OK\r\n"
 "Date : Mon, 27 Jul 2009 12 : 28 : 53 GMT\r\n"
 "Server : Apache / 2.2.14 (Win32)\r\n"
@@ -68,7 +68,7 @@ char *http_response_fmt =
 "%s"
 ;
 
-char *http_response_server_stopped =
+char *http_response_server_stopped = (char*)
 "HTTP / 1.1 200 OK\r\n"
 "Date : Mon, 27 Jul 2009 12 : 28 : 53 GMT\r\n"
 "Server : Apache / 2.2.14 (Win32)\r\n"
@@ -84,7 +84,7 @@ char *http_response_server_stopped =
 "</html>"
 ;
 
-char * html_code_fmt__withGetSubmit =
+char * html_code_fmt__withGetSubmit = (char*)
 "<html>\r\n"
 "<head>\r\n"
 "<link rel = \"icon\" href = \"data:;base64,=\">\r\n"
@@ -127,7 +127,7 @@ char * html_code_fmt__withGetSubmit =
 "</html>\r\n"
 ;
 
-char *html_code_fmt__withPostSubmit =
+char *html_code_fmt__withPostSubmit = (char*)
 "<html>\r\n"
 "<head>\r\n"
 "<link rel = \"icon\" href = \"data:;base64,=\">\r\n"
@@ -210,12 +210,12 @@ int handleClient(int new_socket, char * html_code, char * http_response){
 		return -1;//break;
 	}
 
-	char * http_method_key = "http_method=";
-	char * B_key = "B=";
-	char * C_key = "C=";
-	char * D_key = "D=";
-	char * E_key = "E=";
-	char * F_key = "F=";
+	char * http_method_key =  (char*)"http_method=";
+	char * B_key =  (char*)"B=";
+	char * C_key =  (char*)"C=";
+	char * D_key =  (char*)"D=";
+	char * E_key =  (char*)"E=";
+	char * F_key =  (char*)"F=";
 
 	char * strPOSTValues = NULL, * strPtr = NULL;
 
