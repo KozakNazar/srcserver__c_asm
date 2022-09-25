@@ -223,49 +223,49 @@ int handleClient(int new_socket, char * html_code, char * http_response){
 		usePostSubmit = 1;
 
 		if (strPtr = strstr(strPOSTValues, http_method_key)) {
-			sscanf(strPtr + strlen(http_method_key), "%hhd", &usePostSubmit);
+			(void)sscanf(strPtr + strlen(http_method_key), "%hhd", &usePostSubmit);
 		}
 
 		if (strPtr = strstr(strPOSTValues, B_key)) {				
-			sscanf(strPtr + strlen(B_key), "%lf", &b2);
+			(void)sscanf(strPtr + strlen(B_key), "%lf", &b2);
 		}
 		if (strPtr = strstr(strPOSTValues, C_key)) {
-			sscanf(strPtr + strlen(C_key), "%f", &c1);
+			(void)sscanf(strPtr + strlen(C_key), "%f", &c1);
 		}
 		if (strPtr = strstr(strPOSTValues, D_key)) {
-			sscanf(strPtr + strlen(D_key), "%lf", &d2);
+			(void)sscanf(strPtr + strlen(D_key), "%lf", &d2);
 		}
 		if (strPtr = strstr(strPOSTValues, E_key)) {
-			sscanf(strPtr + strlen(E_key), "%f", &e1);
+			(void)sscanf(strPtr + strlen(E_key), "%f", &e1);
 		}
 		if (strPtr = strstr(strPOSTValues, F_key)) {
-			sscanf(strPtr + strlen(F_key), "%lf", &f2);
+			(void)sscanf(strPtr + strlen(F_key), "%lf", &f2);
 		}
 	}
 	else{
 		if (strPtr = strstr(buffer, http_method_key)) {
-			sscanf(strPtr + strlen(http_method_key), "%hhd", &usePostSubmit);
+			(void)sscanf(strPtr + strlen(http_method_key), "%hhd", &usePostSubmit);
 		}
 		else{
 		    if (strPtr = strstr(buffer, B_key)) {
 		    	usePostSubmit = 0;
-		    	sscanf(strPtr + strlen(B_key), "%lf", &b2);
+		    	(void)sscanf(strPtr + strlen(B_key), "%lf", &b2);
 		    }
 		    if (strPtr = strstr(buffer, C_key)) {
 		    	usePostSubmit = 0;
-		    	sscanf(strPtr + strlen(C_key), "%f", &c1);
+		    	(void)sscanf(strPtr + strlen(C_key), "%f", &c1);
 		    }
 		    if (strPtr = strstr(buffer, D_key)) {
 		    	usePostSubmit = 0;
-		    	sscanf(strPtr + strlen(D_key), "%lf", &d2);
+		    	(void)sscanf(strPtr + strlen(D_key), "%lf", &d2);
 		    }
 		    if (strPtr = strstr(buffer, E_key)) {
 		    	usePostSubmit = 0;
-		    	sscanf(strPtr + strlen(E_key), "%f", &e1);
+		    	(void)sscanf(strPtr + strlen(E_key), "%f", &e1);
 		    }
 		    if (strPtr = strstr(buffer, F_key)) {
 		    	usePostSubmit = 0;
-		    	sscanf(strPtr + strlen(F_key), "%lf", &f2);
+		    	(void)sscanf(strPtr + strlen(F_key), "%lf", &f2);
 		    }
 		}
 	}
