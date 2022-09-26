@@ -161,7 +161,7 @@ char *html_code_fmt__withPostSubmit = (char*)
 "<h2>F = <input name = \"F\" type = \"text\" value = \"%lf\"></h2>\r\n"
 "<h2>-------</h2>\r\n"
 "<h2>X(Assembly) = %f</h2>\r\n"
-"<h2>X(Go) = %f</h2>\r\n"
+"<h2>X(C++) = %f</h2>\r\n"
 "<h2>--------------------------</h2>\r\n"
 "<input type = \"submit\" value = \"Send values by POST and compute result\">\r\n"
 "\r\n"
